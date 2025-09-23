@@ -1,3 +1,123 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles */
+@layer base {
+    body {
+        @apply font-sans text-gray-900 bg-gray-50;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold text-gray-900;
+    }
+    
+    h1 { @apply text-3xl; }
+    h2 { @apply text-2xl; }
+    h3 { @apply text-xl; }
+    h4 { @apply text-lg; }
+    
+    a {
+        @apply text-primary-600 hover:text-primary-800 transition-colors duration-200;
+    }
+    
+    button, [type='button'], [type='reset'], [type='submit'] {
+        @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+    }
+    
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    input[type='number'],
+    input[type='tel'],
+    input[type='url'],
+    input[type='date'],
+    input[type='datetime-local'],
+    input[type='month'],
+    input[type='search'],
+    input[type='time'],
+    input:not([type]),
+    textarea,
+    select {
+        @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm;
+    }
+    
+    [type='checkbox'],
+    [type='radio'] {
+        @apply h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded;
+    }
+    
+    [type='checkbox'] {
+        @apply rounded;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+    }
+    
+    .btn-outline {
+        @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-primary-500;
+    }
+    
+    .btn-danger {
+        @apply bg-red-600 hover:bg-red-700 focus:ring-red-500;
+    }
+    
+    .card {
+        @apply bg-white overflow-hidden shadow rounded-lg;
+    }
+    
+    .card-header {
+        @apply px-4 py-5 sm:px-6 border-b border-gray-200;
+    }
+    
+    .card-body {
+        @apply px-4 py-5 sm:p-6;
+    }
+    
+    .card-footer {
+        @apply bg-gray-50 px-4 py-4 sm:px-6 border-t border-gray-200;
+    }
+    
+    .badge {
+        @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    }
+    
+    .badge-primary {
+        @apply bg-primary-100 text-primary-800;
+    }
+    
+    .badge-success {
+        @apply bg-green-100 text-green-800;
+    }
+    
+    .badge-warning {
+        @apply bg-yellow-100 text-yellow-800;
+    }
+    
+    .badge-danger {
+        @apply bg-red-100 text-red-800;
+    }
+    
+    .alert {
+        @apply p-4 rounded-md;
+    }
+    
+    .alert-success {
+        @apply bg-green-50 text-green-800;
+    }
+    
+    .alert-warning {
+        @apply bg-yellow-50 text-yellow-800;
+    }
+    
+    .alert-danger {
+        @apply bg-red-50 text-red-800;
+    }
+    
+    .alert-info {
+        @apply bg-blue-50 text-blue-800;
+    }
+}
